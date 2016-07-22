@@ -307,6 +307,16 @@ html {
     display: block;           
 }
 
+.img-upload{
+	border: 1px dashed rgba(0, 153, 255, 0.7); 
+	position: relative;
+}
+
+.img-upload > button{
+	position: absolute;
+	opacity: 0.7;
+}
+
 /* -----------------------------------------------
  * Timeline
  * --------------------------------------------- */
