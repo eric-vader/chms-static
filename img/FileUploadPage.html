@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org" style="width: 100%; height: 100%;"><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="FileUploadPage_files/bootstrap.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<!--- Jquery 1.12.4 minified--->
+<script src="FileUploadPage_files/jquery-1.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="FileUploadPage_files/bootstrap.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</head>
+<body>
+
+ <wicket:extend>
+  <div style="height: 100px; width: auto;" class="">
+
+   <div wicket:id="feedback"></div>
+
+   <div style="diplay: block; margin: 20px 0px;"><div style="position: relative; width: 100%; height: auto;">
+    <img class="img img-thumbnail" style="width: 100%; height: auto; border: 0px; padding: 0px;" src="FileUploadPage_files/50x50.png" alt="img"> <a style="position: absolute; top: 0px; right: 0px; color: #ff0000;"> <span class="glyphicon glyphicon-remove-circle"></span>
+    </a>
+   </div></div>
+
+   <form wicket:id="form" class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+    <div class="form-group">
+     <div wicket:id="progress" class="progress"></div>
+     <label class="btn btn-default btn-file">Browse 
+         <input wicket:id="file" name="file" style="display: none;" onchange="$('#upload-file-info').html($(this).val());$('#max-size').addClass('hidden')" hidden="" type="file">        
+     </label>
+     <span id="upload-file-info" class="label label-info"></span>
+     <div id="max-size" style="display: inline-block"><span wicket:id="max"></span> max size</div>
+    </div>
+    <input wicket:id="ajaxSubmit" class="btn btn-primary pull-right" value="Upload" type="button">
+   </form>
+
+
+  </div>
+ </wicket:extend>
+
+
+</body></html>
